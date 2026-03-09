@@ -1,0 +1,480 @@
+@font-face {
+  font-family: ManbowSolid; 
+  src: url(./assets/fonts/Manbow\ Solid.otf); 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: white;
+}
+
+nav{
+  /*position: sticky;*/
+  top: 0; 
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  padding: 0 15vw 0 15vw;
+
+  background-color: #56a3da
+}
+
+.nav-links{
+  color: white;
+  font-family: ManbowSolid;
+  text-shadow: 0.1rem 0 0 #f77f4c;
+  display: flex;
+  gap: 2rem;
+  flex-direction: row-reverse;
+  align-items: center;
+
+  position: relative;
+  list-style: none;
+  font-size: 1.5rem;
+    
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+body{
+  background-color: #a0c8e5;
+}
+
+.hero{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.name-container{
+  position: relative;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#blue-blob{
+  z-index: 90;
+  height: 400px;
+  position: absolute;
+}
+
+.name {
+  position: relative;
+  top: 4rem;
+  left: 4rem;
+  z-index: 100;
+  color: white;
+  display: block;
+  font-size: 6rem;
+  font-family: ManbowSolid;
+  text-shadow: 0.25rem 0 0 #f77f4c;
+}
+
+.social-link-container{
+  display: flex;
+  gap: 1rem;
+  flex-direction: row-reverse;
+  list-style: none;
+  position: relative;
+}
+
+.social-icon{
+  height: 4rem;
+  /*Make icons white*/
+  filter: drop-shadow(4px 4px 0px #f77f4c) invert(100%)
+}
+
+.social-icon:hover{
+  filter: drop-shadow(4px 4px 0px #0880b3)invert(100%);
+}
+
+.portrait-container{
+  height: 500px;
+  width: 500px;
+  position: relative;
+}
+
+
+.portrait{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: white 1rem solid;
+    position: absolute;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.portrait-decoration{
+    position: absolute;
+}
+
+#orange-fruit{
+    height: 300px;
+    z-index: 100;
+    bottom: -75px;
+    left: -75px;
+}
+
+.portrait-container:hover > #orange-fruit{
+    animation: orangeBounce 2s infinite;
+}
+
+#leaf1{
+    transform: rotate(-25deg);
+    z-index: 90;
+    height: 225px;
+    bottom: 50px;
+    right: -90px;
+}
+
+.portrait-container:hover > #leaf1{
+    animation: leaf1 4s ease-in-out infinite;
+}
+
+#leaf2{
+    transform: rotate(12deg);
+    z-index: 100;
+    height: 250px;
+    bottom: -70px;
+    right: 0px;
+}
+
+.portrait-container:hover > #leaf2{
+    animation: leaf2 4s ease-in-out infinite;
+}
+
+section{
+  margin-top: 3rem;
+  padding: 0 15vw 0 15vw;
+}
+
+.section-title{
+  font-family: ManbowSolid;
+  font-size: 4rem;
+  color: white;
+  text-shadow: 0.25rem 0 0 #f77f4c;
+}
+
+.form-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#secret-container p {
+  font-family: 'Sour Gummy', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+#secret-container form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#name-input {
+  font-family: 'Sour Gummy', sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid white;
+  border-radius: 8px;
+  background-color: white;
+  color: #56a3da;
+  min-width: 250px;
+}
+
+#name-input:focus {
+  outline: none;
+  border-color: #f77f4c;
+}
+
+#name-submit-btn {
+  font-family: ManbowSolid;
+  font-size: 1.2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #f77f4c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#name-submit-btn:hover {
+  background-color: #0880b3;
+}
+
+#secret-message p {
+  font-family: 'Sour Gummy', sans-serif;
+  font-size: 1.8rem;
+  color: white;
+}
+
+
+.about-me{
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-me-left{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+}
+
+.about-me-right{
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.tape{
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  z-index: 200;
+}
+
+#tape-img1{
+  top: -50px;
+  left: -80px;
+  transform: rotate(-35deg);
+}
+
+#tape-img2{
+  bottom: -35px;
+  right: -80px;
+  transform: rotate(-45deg);
+}
+
+#hi{
+  font-family: 'Lobster', sans-serif;
+  font-size: 3rem;
+}
+
+.about-me-description{
+  position: relative;
+  color: white;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  font-family: "Sour Gummy", sans-serif;
+  border: white 0.5rem dashed;
+  padding: 1rem;
+  background-color: #56a3da;
+  border-radius: .5rem;
+}
+
+.about-me-imgs{
+  position: relative;
+  flex: 1;
+}
+
+.about-me-img{
+  position: absolute;
+  border-radius: 10%;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+  z-index: 0;
+}
+
+.about-me-img:hover{
+  z-index: 100;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+#brian-griffin-img{
+  width: 250px;
+  height: 300px;
+  top: 140px;
+  left: 225px;
+}
+
+#matcha-latte-img{
+  z-index: 2;
+  position: absolute;
+  width: 300px;
+  height: 250px;
+  left: 40px;
+}
+
+#artpiece-img{
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  top: 200px;
+}
+
+@keyframes orangeBounce {
+	0%, 60%, 80%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+	20% {
+    transform: rotate(3deg) translateY(-15px);
+  }
+	40% {
+    transform: rotate(-3deg) translateY(-10px);
+  }
+}
+
+@keyframes leaf2 {
+  0% {
+    transform: rotate(12deg) translateX(0px);
+  }
+  10% {
+    transform: rotate(10deg) translateX(-1px);
+  }
+  20% {
+    transform: rotate(14deg) translateX(1px);
+  }
+  30% {
+    transform: rotate(10deg) translateX(-1px);
+  }
+  40% {
+    transform: rotate(14deg) translateX(1px);
+  }
+  50% {
+    transform: rotate(11deg) translateX(0px);
+  }
+  60% {
+    transform: rotate(13deg) translateX(0px);
+  }
+  70% {
+    transform: rotate(11deg) translateX(0px);
+  }
+  80% {
+    transform: rotate(13deg) translateX(0px);
+  }
+  90% {
+    transform: rotate(11deg) translateX(0px);
+  }
+  100% {
+    transform: rotate(12deg) translateX(0px);
+  }
+}
+
+@keyframes leaf1 {
+  0% {
+    transform: rotate(-25deg) translateX(0px);
+  }
+  10% {
+    transform: rotate(-23deg) translateX(-1px);
+  }
+  20% {
+    transform: rotate(-27deg) translateX(1px);
+  }
+  30% {
+    transform: rotate(-23deg) translateX(-1px);
+  }
+  40% {
+    transform: rotate(-27deg) translateX(1px);
+  }
+  50% {
+    transform: rotate(-26deg) translateX(0px);
+  }
+  60% {
+    transform: rotate(-24deg) translateX(0px);
+  }
+  70% {
+    transform: rotate(-26deg) translateX(0px);
+  }
+  80% {
+    transform: rotate(-24deg) translateX(0px);
+  }
+  90% {
+    transform: rotate(-26deg) translateX(0px);
+  }
+  100% {
+    transform: rotate(-25deg) translateX(0px);
+  }
+}
+
+.resume-container{ 
+  background-color: #56a3da;
+  padding: 2rem;
+  border: white 0.5rem dashed;
+  border-radius: .5rem;
+}
+
+.resume{
+  color: white;
+  font-family: "Sour Gummy", sans-serif;
+  margin-bottom: 3rem;
+}
+
+.resume h3{
+  font-size: 2rem;
+  font-family: ManbowSolid;
+  text-shadow: 0.1rem 0 0 #f77f4c;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.resume li{
+  margin-left: 2rem;
+  font-size: 1.25rem;
+}
+
+.resume h4{
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  text-shadow: 0.1rem 0 0 #f77f4c;
+}
+
+.resume strong{
+  text-shadow: 0.1rem 0 0 #f77f4c;
+}
+
+#secret-message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  padding: 1rem;
+  background-color: #f77f4c;
+}
+
+.hidden {
+  display: none !important;
+}
+
+footer {
+  background-color: #56a3da;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 3rem;
+  border-top: 3px solid white;
+}
+
+footer a,
+footer span {
+  font-family: 'Sour Gummy', sans-serif;
+  font-size: 0.9rem;
+  color: white;
+  margin: 0 1rem;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+footer a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
